@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.maurevair.booking.FlightRepositoryTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.305 s <<< FAILURE! - in com.maurevair.booking.FlightRepositoryTests
+testCreateFlight  Time elapsed: 0.485 s  <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [UK_hn2pkkbm3kagyimkmnfg718x7]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at com.maurevair.booking.FlightRepositoryTests.testCreateFlight(FlightRepositoryTests.java:33)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at com.maurevair.booking.FlightRepositoryTests.testCreateFlight(FlightRepositoryTests.java:33)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'Syria' for key 'UK_hn2pkkbm3kagyimkmnfg718x7'
+	at com.maurevair.booking.FlightRepositoryTests.testCreateFlight(FlightRepositoryTests.java:33)
+

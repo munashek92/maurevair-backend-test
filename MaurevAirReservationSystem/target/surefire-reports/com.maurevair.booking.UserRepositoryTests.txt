@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.maurevair.booking.UserRepositoryTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.129 s <<< FAILURE! - in com.maurevair.booking.UserRepositoryTests
+testFindByEmail  Time elapsed: 0.041 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.maurevair.booking.User.getEmail()" because "user" is null
+	at com.maurevair.booking.UserRepositoryTests.testFindByEmail(UserRepositoryTests.java:45)
+
+testCreateUser  Time elapsed: 0.034 s  <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [UK_6dotkott2kjsp8vw4d0m25fb7]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at com.maurevair.booking.UserRepositoryTests.testCreateUser(UserRepositoryTests.java:32)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at com.maurevair.booking.UserRepositoryTests.testCreateUser(UserRepositoryTests.java:32)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'tinashe@gmail.com' for key 'UK_6dotkott2kjsp8vw4d0m25fb7'
+	at com.maurevair.booking.UserRepositoryTests.testCreateUser(UserRepositoryTests.java:32)
+
